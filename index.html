@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muskan Nayyar</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
         
@@ -75,10 +76,27 @@
             66% { transform: translate(-20px, 20px) scale(0.9); }
         }
         
+        /* Top Banner */
+        .top-banner {
+            background: linear-gradient(135deg, #4a90e2, #5dade2);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 40px;
+            margin: 50px auto 0;
+            padding: 50px 40px;
             position: relative;
             z-index: 1;
         }
@@ -87,9 +105,9 @@
         .hero {
             display: grid;
             grid-template-columns: 320px 1fr;
-            gap: 80px;
+            gap: 60px;
             align-items: start;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
             position: relative;
         }
         
@@ -120,7 +138,7 @@
         /* Sidebar Info Boxes */
         .info-box {
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             margin-bottom: 20px;
@@ -131,18 +149,26 @@
             font-size: 20px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 18px;
-            padding-bottom: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
             border-bottom: 2px solid var(--light-grey);
         }
         
         .info-list {
             list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        .core-strengths-box .info-list {
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 12px;
         }
         
         .info-list li {
             font-size: 14px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
             line-height: 1.6;
@@ -160,7 +186,7 @@
         /* Hobbies Section in Sidebar */
         .hobbies-box {
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), rgba(231, 223, 213, 0.08));
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             border: 2px solid rgba(74, 144, 226, 0.15);
         }
@@ -170,7 +196,7 @@
             font-size: 20px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
         
         .hobbies-grid {
@@ -181,7 +207,7 @@
         
         .hobby-item {
             background: white;
-            padding: 15px 12px;
+            padding: 12px 10px;
             border-radius: 10px;
             text-align: center;
             font-size: 13px;
@@ -193,7 +219,7 @@
         .hobby-item .emoji {
             font-size: 24px;
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
         
         /* Hero Content */
@@ -214,7 +240,7 @@
         .hero-content .tagline {
             font-size: 24px;
             color: var(--grey);
-            margin-bottom: 32px;
+            margin-bottom: 25px;
             font-weight: 500;
             line-height: 1.4;
         }
@@ -223,12 +249,12 @@
             font-size: 18px;
             line-height: 1.7;
             color: var(--slate);
-            margin-bottom: 32px;
+            margin-bottom: 25px;
         }
         
         .contact-info {
             display: flex;
-            gap: 24px;
+            gap: 20px;
             flex-wrap: wrap;
             font-family: 'Space Mono', monospace;
             font-size: 13px;
@@ -252,7 +278,7 @@
             font-size: 42px;
             font-weight: 900;
             color: var(--navy);
-            margin-bottom: 50px;
+            margin-bottom: 35px;
             margin-top: 0;
             position: relative;
             display: inline-block;
@@ -261,7 +287,7 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 0;
             width: 60%;
             height: 4px;
@@ -272,14 +298,14 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 35px;
-            margin-bottom: 100px;
+            gap: 30px;
+            margin-bottom: 60px;
         }
         
         .project-card {
             background: white;
             border-radius: 20px;
-            padding: 40px;
+            padding: 35px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             cursor: pointer;
             transition: all 0.3s ease;
@@ -313,7 +339,7 @@
             display: flex;
             justify-content: space-between;
             align-items: start;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         
         .project-icon {
@@ -349,14 +375,14 @@
             font-size: 26px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             line-height: 1.3;
         }
         
         .project-subtitle {
             font-size: 14px;
             color: var(--grey);
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             font-weight: 600;
         }
         
@@ -376,19 +402,19 @@
         .project-card.expanded .project-details {
             max-height: 2000px;
             opacity: 1;
-            margin-top: 30px;
+            margin-top: 25px;
         }
         
         .project-metrics {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin: 30px 0;
+            gap: 18px;
+            margin: 25px 0;
         }
         
         .mini-metric {
             background: rgba(74, 144, 226, 0.05);
-            padding: 24px;
+            padding: 22px;
             border-radius: 12px;
             border-left: 4px solid var(--blue);
         }
@@ -399,7 +425,7 @@
             font-weight: 900;
             color: var(--blue);
             line-height: 1;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         
         .mini-metric-label {
@@ -412,13 +438,13 @@
         
         .project-bullets {
             list-style: none;
-            margin-top: 25px;
+            margin-top: 20px;
         }
         
         .project-bullets li {
             position: relative;
             padding-left: 28px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             font-size: 15px;
             line-height: 1.7;
             color: var(--slate);
@@ -436,9 +462,9 @@
         /* Highlight Section (Entrepreneurial) */
         .highlight-section {
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.08), rgba(231, 223, 213, 0.12));
-            padding: 50px;
+            padding: 45px;
             border-radius: 20px;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
             border-left: 6px solid var(--blue);
         }
         
@@ -446,12 +472,12 @@
             display: inline-block;
             background: var(--blue);
             color: white;
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         
         .highlight-section h3 {
@@ -459,7 +485,7 @@
             font-size: 32px;
             font-weight: 900;
             color: var(--navy);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             line-height: 1.3;
         }
         
@@ -467,19 +493,19 @@
             font-size: 17px;
             line-height: 1.8;
             color: var(--slate);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .highlight-metrics {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 30px;
+            gap: 20px;
+            margin-top: 25px;
         }
         
         .highlight-metric {
             background: white;
-            padding: 28px;
+            padding: 25px;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
@@ -490,7 +516,7 @@
             font-size: 32px;
             font-weight: 900;
             color: var(--blue);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             line-height: 1;
         }
         
@@ -502,18 +528,18 @@
         
         /* Volunteer Work Section */
         .volunteer-section {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         
         .volunteer-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 25px;
         }
         
         .volunteer-card {
             background: white;
-            padding: 40px;
+            padding: 35px;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
@@ -527,7 +553,7 @@
         
         .volunteer-icon {
             font-size: 48px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         
         .volunteer-title {
@@ -535,7 +561,7 @@
             font-size: 22px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             line-height: 1.3;
         }
         
@@ -543,12 +569,12 @@
             font-size: 15px;
             line-height: 1.7;
             color: var(--slate);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         
         .volunteer-impact {
             background: rgba(74, 144, 226, 0.1);
-            padding: 12px 20px;
+            padding: 10px 18px;
             border-radius: 10px;
             font-weight: 700;
             color: var(--blue);
@@ -560,7 +586,7 @@
         @media (max-width: 968px) {
             .hero {
                 grid-template-columns: 1fr;
-                gap: 50px;
+                gap: 40px;
             }
             
             .photo-wrapper {
@@ -593,12 +619,17 @@
             }
             
             .container {
-                padding: 50px 24px;
+                padding: 40px 24px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        🚧 Website Under Construction
+    </div>
+    
     <div class="blob blob1"></div>
     <div class="blob blob2"></div>
     <div class="blob blob3"></div>
@@ -620,11 +651,12 @@
                     </ul>
                 </div>
                 
-                <div class="info-box">
+                <div class="info-box core-strengths-box">
                     <h3>Core Strengths</h3>
                     <ul class="info-list">
                         <li>Data-driven decision making</li>
                         <li>Cross-functional leadership</li>
+                        <li>Customer insights & behavior analysis</li>
                         <li>Process optimization</li>
                         <li>Growth strategy</li>
                         <li>Stakeholder management</li>
@@ -848,8 +880,6 @@
         
         <!-- Volunteer Work Section -->
         <section class="volunteer-section">
-            <h2 class="section-title">Beyond Work 💙</h2>
-            
             <div class="volunteer-grid">
                 <div class="volunteer-card">
                     <div class="volunteer-icon">🩺</div>
