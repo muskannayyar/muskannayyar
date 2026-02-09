@@ -697,7 +697,7 @@
                 </p>
                 
                 <div class="contact-info">
-                    <span>📧 <a href="/cdn-cgi/l/email-protection#315c44425a505f425f504848504371565c50585d1f525e5c"><span class="__cf_email__" data-cfemail="4a273f39212b2439242b33332b380a2d272b232664292527">[email&#160;protected]</span></a></span>
+                    <span>📧 <a href="mailto:muskannayyar08@gmail.com">muskannayyar08@gmail.com</a></span>
                     <span>📱 +65 87636514</span>
                     <a href="https://linkedin.com/in/muskannayyar08" target="_blank">🔗 LinkedIn</a>
                 </div>
@@ -911,7 +911,7 @@
         </section>
     </div>
     
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function toggleProject(element) {
             const isExpanded = element.classList.contains('expanded');
             
@@ -925,4 +925,14 @@
                 element.classList.add('expanded');
                 
                 // Smooth scroll to card
-                set
+                setTimeout(() => {
+                    element.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest'
+                    });
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>
