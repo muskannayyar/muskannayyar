@@ -31,6 +31,7 @@
             color: var(--slate);
             overflow-x: hidden;
             position: relative;
+            min-height: 100vh;
         }
         
         /* Animated background blobs */
@@ -95,8 +96,8 @@
         
         .container {
             max-width: 1200px;
-            margin: 50px auto 0;
-            padding: 50px 40px;
+            margin: 60px auto 0;
+            padding: 40px 20px 80px;
             position: relative;
             z-index: 1;
         }
@@ -105,14 +106,16 @@
         .hero {
             display: grid;
             grid-template-columns: 320px 1fr;
-            gap: 40px;
+            gap: 50px;
             align-items: start;
             margin-bottom: 60px;
             position: relative;
+            width: 100%;
         }
         
         .photo-wrapper {
             position: relative;
+            width: 100%;
         }
         
         .photo-frame {
@@ -225,6 +228,7 @@
         /* Hero Content */
         .hero-content {
             padding-top: 0;
+            min-width: 0;
         }
         
         .hero-content h1 {
@@ -528,7 +532,7 @@
         
         /* Volunteer Work Section */
         .volunteer-section {
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
         
         .volunteer-grid {
@@ -619,7 +623,7 @@
             }
             
             .container {
-                padding: 40px 24px;
+                padding: 40px 20px;
             }
         }
     </style>
