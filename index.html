@@ -138,10 +138,22 @@
         /* Sidebar Info Boxes */
         .info-box {
             background: white;
-            padding: 20px 25px;
+            padding: 25px;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-two-column .info-box,
+        .sidebar-two-column .hobbies-box {
+            margin-bottom: 0;
         }
         
         .info-box h3 {
@@ -149,20 +161,18 @@
             font-size: 18px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 12px;
-            padding-bottom: 8px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
             border-bottom: 2px solid var(--light-grey);
         }
         
         .info-list {
             list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 15px;
         }
         
         .info-list li {
             font-size: 13px;
+            margin-bottom: 10px;
             padding-left: 18px;
             position: relative;
             line-height: 1.5;
@@ -180,10 +190,9 @@
         /* Hobbies Section in Sidebar */
         .hobbies-box {
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), rgba(231, 223, 213, 0.08));
-            padding: 20px 25px;
+            padding: 25px;
             border-radius: 15px;
             border: 2px solid rgba(74, 144, 226, 0.15);
-            margin-bottom: 15px;
         }
         
         .hobbies-box h3 {
@@ -191,31 +200,32 @@
             font-size: 18px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-grey);
         }
         
         .hobbies-grid {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
-            flex-wrap: wrap;
         }
         
         .hobby-item {
             background: white;
-            padding: 10px 15px;
+            padding: 12px 10px;
             border-radius: 10px;
             text-align: center;
             font-size: 13px;
             font-weight: 600;
             color: var(--slate);
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
         
         .hobby-item .emoji {
-            font-size: 18px;
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
         }
         
         /* Hero Content */
@@ -590,6 +600,11 @@
                 margin: 0 auto;
             }
             
+            .sidebar-two-column {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -647,36 +662,38 @@
                     </ul>
                 </div>
                 
-                <div class="info-box">
-                    <h3>Core Strengths</h3>
-                    <ul class="info-list">
-                        <li>Data-driven decision making</li>
-                        <li>Cross-functional leadership</li>
-                        <li>Customer insights & behavior analysis</li>
-                        <li>Process optimization</li>
-                        <li>Growth strategy</li>
-                        <li>Stakeholder management</li>
-                    </ul>
-                </div>
-                
-                <div class="hobbies-box">
-                    <h3>Interests</h3>
-                    <div class="hobbies-grid">
-                        <div class="hobby-item">
-                            <span class="emoji">🏊‍♀️</span>
-                            Swimming
-                        </div>
-                        <div class="hobby-item">
-                            <span class="emoji">🏸</span>
-                            Badminton
-                        </div>
-                        <div class="hobby-item">
-                            <span class="emoji">📸</span>
-                            Photography
-                        </div>
-                        <div class="hobby-item">
-                            <span class="emoji">🎨</span>
-                            Design
+                <div class="sidebar-two-column">
+                    <div class="info-box">
+                        <h3>Core Strengths</h3>
+                        <ul class="info-list">
+                            <li>Data-driven decision making</li>
+                            <li>Cross-functional leadership</li>
+                            <li>Customer insights & behavior analysis</li>
+                            <li>Process optimization</li>
+                            <li>Growth strategy</li>
+                            <li>Stakeholder management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hobbies-box">
+                        <h3>Interests</h3>
+                        <div class="hobbies-grid">
+                            <div class="hobby-item">
+                                <span class="emoji">🏊‍♀️</span>
+                                Swimming
+                            </div>
+                            <div class="hobby-item">
+                                <span class="emoji">🏸</span>
+                                Badminton
+                            </div>
+                            <div class="hobby-item">
+                                <span class="emoji">📸</span>
+                                Photography
+                            </div>
+                            <div class="hobby-item">
+                                <span class="emoji">🎨</span>
+                                Design
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -693,7 +710,7 @@
                 </p>
                 
                 <div class="contact-info">
-                    <span>📧 <a href="mailto:muskansnayyar@gmail.com">muskansnayyar@gmail.com</a></span>
+                    <span>📧 <a href="/cdn-cgi/l/email-protection#107d65637b717e637e716969716250777d71797c3e737f7d"><span class="__cf_email__" data-cfemail="b2dfc7c1d9d3dcc1dcd3cbcbd3c0f2d5dfd3dbde9cd1dddf">[email&#160;protected]</span></a></span>
                     <span>📱 +65 87636514</span>
                     <a href="https://linkedin.com/in/muskannayyar08" target="_blank">🔗 LinkedIn</a>
                 </div>
@@ -907,7 +924,7 @@
         </section>
     </div>
     
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function toggleProject(element) {
             const isExpanded = element.classList.contains('expanded');
             
@@ -921,4 +938,14 @@
                 element.classList.add('expanded');
                 
                 // Smooth scroll to card
-                set
+                setTimeout(() => {
+                    element.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest'
+                    });
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>
