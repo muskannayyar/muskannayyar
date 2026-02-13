@@ -31,7 +31,6 @@
             color: var(--slate);
             overflow-x: hidden;
             position: relative;
-            min-height: 100vh;
         }
         
         /* Animated background blobs */
@@ -96,8 +95,8 @@
         
         .container {
             max-width: 1200px;
-            margin: 60px auto 0;
-            padding: 40px 20px 80px;
+            margin: 50px auto 0;
+            padding: 50px 40px;
             position: relative;
             z-index: 1;
         }
@@ -106,16 +105,14 @@
         .hero {
             display: grid;
             grid-template-columns: 320px 1fr;
-            gap: 50px;
+            gap: 30px;
             align-items: start;
             margin-bottom: 60px;
             position: relative;
-            width: 100%;
         }
         
         .photo-wrapper {
             position: relative;
-            width: 100%;
         }
         
         .photo-frame {
@@ -149,7 +146,7 @@
         
         .info-box h3 {
             font-family: 'Fraunces', serif;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--navy);
             margin-bottom: 15px;
@@ -159,22 +156,14 @@
         
         .info-list {
             list-style: none;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-        
-        .core-strengths-box .info-list {
-            grid-template-columns: 1fr 1fr;
-            gap: 10px 12px;
         }
         
         .info-list li {
-            font-size: 14px;
+            font-size: 13px;
             margin-bottom: 10px;
-            padding-left: 20px;
+            padding-left: 18px;
             position: relative;
-            line-height: 1.6;
+            line-height: 1.5;
             color: var(--slate);
         }
         
@@ -186,49 +175,73 @@
             font-weight: bold;
         }
         
-        /* Hobbies Section in Sidebar */
-        .hobbies-box {
-            background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), rgba(231, 223, 213, 0.08));
-            padding: 25px;
-            border-radius: 15px;
-            border: 2px solid rgba(74, 144, 226, 0.15);
+        /* Tag/Pill styles for Core Strengths and Interests */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
         }
         
-        .hobbies-box h3 {
+        .tag {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(74, 144, 226, 0.05));
+            color: var(--navy);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            transition: all 0.2s ease;
+        }
+        
+        .tag:hover {
+            background: linear-gradient(135deg, var(--blue), var(--accent-blue));
+            color: white;
+            border-color: var(--blue);
+            transform: translateY(-2px);
+        }
+        
+        /* Interests Section - using same tag style */
+        .interests-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+        
+        .interests-box h3 {
             font-family: 'Fraunces', serif;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--navy);
             margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-grey);
         }
         
-        .hobbies-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-        
-        .hobby-item {
-            background: white;
-            padding: 12px 10px;
-            border-radius: 10px;
-            text-align: center;
+        .interest-tag {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.08), rgba(231, 223, 213, 0.1));
+            color: var(--navy);
+            padding: 8px 14px;
+            border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
-            color: var(--slate);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid rgba(74, 144, 226, 0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
         }
         
-        .hobby-item .emoji {
-            font-size: 24px;
-            display: block;
-            margin-bottom: 5px;
+        .interest-tag:hover {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.15), rgba(231, 223, 213, 0.15));
+            border-color: var(--blue);
+            transform: translateY(-2px);
         }
         
         /* Hero Content */
         .hero-content {
             padding-top: 0;
-            min-width: 0;
         }
         
         .hero-content h1 {
@@ -532,7 +545,7 @@
         
         /* Volunteer Work Section */
         .volunteer-section {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         
         .volunteer-grid {
@@ -623,7 +636,7 @@
             }
             
             .container {
-                padding: 40px 20px;
+                padding: 40px 24px;
             }
         }
     </style>
@@ -655,37 +668,25 @@
                     </ul>
                 </div>
                 
-                <div class="info-box core-strengths-box">
+                <div class="info-box">
                     <h3>Core Strengths</h3>
-                    <ul class="info-list">
-                        <li>Data-driven decision making</li>
-                        <li>Cross-functional leadership</li>
-                        <li>Customer insights & behavior analysis</li>
-                        <li>Process optimization</li>
-                        <li>Growth strategy</li>
-                        <li>Stakeholder management</li>
-                    </ul>
+                    <div class="tags-container">
+                        <span class="tag">📊 Data-driven decision making</span>
+                        <span class="tag">👥 Cross-functional leadership</span>
+                        <span class="tag">🎯 Customer insights</span>
+                        <span class="tag">⚙️ Process optimization</span>
+                        <span class="tag">📈 Growth strategy</span>
+                        <span class="tag">🤝 Stakeholder management</span>
+                    </div>
                 </div>
                 
-                <div class="hobbies-box">
+                <div class="interests-box">
                     <h3>Interests</h3>
-                    <div class="hobbies-grid">
-                        <div class="hobby-item">
-                            <span class="emoji">🏊‍♀️</span>
-                            Swimming
-                        </div>
-                        <div class="hobby-item">
-                            <span class="emoji">🏸</span>
-                            Badminton
-                        </div>
-                        <div class="hobby-item">
-                            <span class="emoji">📸</span>
-                            Photography
-                        </div>
-                        <div class="hobby-item">
-                            <span class="emoji">🎨</span>
-                            Design
-                        </div>
+                    <div class="tags-container">
+                        <span class="interest-tag">🏊‍♀️ Swimming</span>
+                        <span class="interest-tag">🏸 Badminton</span>
+                        <span class="interest-tag">📸 Photography</span>
+                        <span class="interest-tag">🎨 Design</span>
                     </div>
                 </div>
             </div>
@@ -701,7 +702,7 @@
                 </p>
                 
                 <div class="contact-info">
-                    <span>📧 <a href="mailto:muskansnayyar@gmail.com">muskansnayyar@gmail.com</a></span>
+                    <span>📧 <a href="/cdn-cgi/l/email-protection#107d65637b717e637e716969716250777d71797c3e737f7d"><span class="__cf_email__" data-cfemail="b2dfc7c1d9d3dcc1dcd3cbcbd3c0f2d5dfd3dbde9cd1dddf">[email&#160;protected]</span></a></span>
                     <span>📱 +65 87636514</span>
                     <a href="https://linkedin.com/in/muskannayyar08" target="_blank">🔗 LinkedIn</a>
                 </div>
