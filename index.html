@@ -136,21 +136,40 @@
         }
         
         /* Sidebar Info Boxes */
+        .sidebar-horizontal {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
         .info-box {
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 0;
+        }
+        
+        .skills-interests-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
             margin-bottom: 20px;
+        }
+        
+        .skills-interests-grid .info-box,
+        .skills-interests-grid .interests-box {
+            margin-bottom: 0;
         }
         
         .info-box h3 {
             font-family: 'Fraunces', serif;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--light-grey);
         }
         
@@ -159,8 +178,8 @@
         }
         
         .info-list li {
-            font-size: 13px;
-            margin-bottom: 10px;
+            font-size: 12px;
+            margin-bottom: 8px;
             padding-left: 18px;
             position: relative;
             line-height: 1.5;
@@ -178,16 +197,16 @@
         /* Tag/Pill styles for Core Strengths and Interests */
         .tags-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
         }
         
         .tag {
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(74, 144, 226, 0.05));
             color: var(--navy);
-            padding: 10px 12px;
+            padding: 8px 10px;
             border-radius: 12px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             border: 1px solid rgba(74, 144, 226, 0.2);
             transition: all 0.2s ease;
@@ -204,19 +223,19 @@
         /* Interests Section - using same tag style */
         .interests-box {
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 20px;
+            margin-bottom: 0;
         }
         
         .interests-box h3 {
             font-family: 'Fraunces', serif;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
             border-bottom: 2px solid var(--light-grey);
         }
         
@@ -227,15 +246,15 @@
         .interest-tag {
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.08), rgba(231, 223, 213, 0.1));
             color: var(--navy);
-            padding: 10px 12px;
+            padding: 8px 10px;
             border-radius: 12px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             border: 1px solid rgba(74, 144, 226, 0.15);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 4px;
             transition: all 0.2s ease;
         }
         
@@ -617,6 +636,15 @@
                 margin: 0 auto;
             }
             
+            .sidebar-horizontal {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .skills-interests-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .tags-container {
                 grid-template-columns: 1fr;
             }
@@ -670,33 +698,35 @@
                 </div>
                 
                 <!-- Info Boxes -->
-                <div class="info-box">
-                    <h3>Currently</h3>
-                    <ul class="info-list">
-                        <li>MSc Strategic Analysis & Innovation, NUS Business School</li>
-                        <li>Based in Singapore</li>
-                    </ul>
-                </div>
-                
-                <div class="info-box">
-                    <h3>Core Strengths</h3>
-                    <div class="tags-container">
-                        <span class="tag">📊 Data-driven</span>
-                        <span class="tag">👥 Leadership</span>
-                        <span class="tag">🎯 Customer insights</span>
-                        <span class="tag">⚙️ Optimization</span>
-                        <span class="tag">📈 Growth strategy</span>
-                        <span class="tag">🤝 Stakeholder mgmt</span>
+                <div class="sidebar-horizontal">
+                    <div class="info-box">
+                        <h3>Currently</h3>
+                        <ul class="info-list">
+                            <li>MSc Strategic Analysis & Innovation, NUS Business School</li>
+                            <li>Based in Singapore</li>
+                        </ul>
                     </div>
-                </div>
-                
-                <div class="interests-box">
-                    <h3>Interests</h3>
-                    <div class="tags-container">
-                        <span class="interest-tag">🏊‍♀️ Swimming</span>
-                        <span class="interest-tag">🏸 Badminton</span>
-                        <span class="interest-tag">📸 Photography</span>
-                        <span class="interest-tag">🎨 Design</span>
+                    
+                    <div class="info-box">
+                        <h3>Core Strengths</h3>
+                        <div class="tags-container">
+                            <span class="tag">📊 Data-driven</span>
+                            <span class="tag">👥 Leadership</span>
+                            <span class="tag">🎯 Customer insights</span>
+                            <span class="tag">⚙️ Optimization</span>
+                            <span class="tag">📈 Growth strategy</span>
+                            <span class="tag">🤝 Stakeholder mgmt</span>
+                        </div>
+                    </div>
+                    
+                    <div class="interests-box">
+                        <h3>Interests</h3>
+                        <div class="tags-container">
+                            <span class="interest-tag">🏊‍♀️ Swimming</span>
+                            <span class="interest-tag">🏸 Badminton</span>
+                            <span class="interest-tag">📸 Photography</span>
+                            <span class="interest-tag">🎨 Design</span>
+                        </div>
                     </div>
                 </div>
             </div>
