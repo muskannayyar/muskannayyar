@@ -177,20 +177,21 @@
         
         /* Tag/Pill styles for Core Strengths and Interests */
         .tags-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
         }
         
         .tag {
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(74, 144, 226, 0.05));
             color: var(--navy);
-            padding: 8px 14px;
-            border-radius: 20px;
+            padding: 10px 12px;
+            border-radius: 12px;
             font-size: 13px;
             font-weight: 600;
             border: 1px solid rgba(74, 144, 226, 0.2);
             transition: all 0.2s ease;
+            text-align: center;
         }
         
         .tag:hover {
@@ -219,16 +220,21 @@
             border-bottom: 2px solid var(--light-grey);
         }
         
+        .interests-box .tags-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
         .interest-tag {
             background: linear-gradient(135deg, rgba(74, 144, 226, 0.08), rgba(231, 223, 213, 0.1));
             color: var(--navy);
-            padding: 8px 14px;
-            border-radius: 20px;
+            padding: 10px 12px;
+            border-radius: 12px;
             font-size: 13px;
             font-weight: 600;
             border: 1px solid rgba(74, 144, 226, 0.15);
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
             gap: 6px;
             transition: all 0.2s ease;
         }
@@ -611,6 +617,10 @@
                 margin: 0 auto;
             }
             
+            .tags-container {
+                grid-template-columns: 1fr;
+            }
+            
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -671,12 +681,12 @@
                 <div class="info-box">
                     <h3>Core Strengths</h3>
                     <div class="tags-container">
-                        <span class="tag">📊 Data-driven decision making</span>
-                        <span class="tag">👥 Cross-functional leadership</span>
+                        <span class="tag">📊 Data-driven</span>
+                        <span class="tag">👥 Leadership</span>
                         <span class="tag">🎯 Customer insights</span>
-                        <span class="tag">⚙️ Process optimization</span>
+                        <span class="tag">⚙️ Optimization</span>
                         <span class="tag">📈 Growth strategy</span>
-                        <span class="tag">🤝 Stakeholder management</span>
+                        <span class="tag">🤝 Stakeholder mgmt</span>
                     </div>
                 </div>
                 
@@ -702,7 +712,7 @@
                 </p>
                 
                 <div class="contact-info">
-                    <span>📧 <a href="/cdn-cgi/l/email-protection#107d65637b717e637e716969716250777d71797c3e737f7d"><span class="__cf_email__" data-cfemail="b2dfc7c1d9d3dcc1dcd3cbcbd3c0f2d5dfd3dbde9cd1dddf">[email&#160;protected]</span></a></span>
+                    <span>📧 <a href="mailto:muskansnayyar@gmail.com">muskansnayyar@gmail.com</a></span>
                     <span>📱 +65 87636514</span>
                     <a href="https://linkedin.com/in/muskannayyar08" target="_blank">🔗 LinkedIn</a>
                 </div>
